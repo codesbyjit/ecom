@@ -1,32 +1,70 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# ------------------------------
+# Environment files (ignore everywhere)
+# ------------------------------
+.env
+*.env
+.env.local
+.env.*.local
 
-# Test binary, built with `go test -c`
-*.test
+# ------------------------------
+# Node.js (web + api)
+# ------------------------------
 
-# Code coverage profiles and other test artifacts
-*.out
+# Global node_modules
+node_modules/
+
+# Project node_modules
+web/node_modules/
+api/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# ------------------------------
+# Go (api)
+# ------------------------------
+
+# Go build binaries
+api/bin/
+api/*.exe
+api/*.exe~
+api/*.dll
+api/*.so
+api/*.dylib
+api/*.test
+
+# Code coverage
 coverage.*
+*.out
 *.coverprofile
 profile.cov
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-# Go workspace file
+# Go workspace
 go.work
 go.work.sum
 
-# env file
-.env
+# ------------------------------
+# Next.js (web)
+# ------------------------------
+web/.next/
+web/out/
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# ------------------------------
+# Nx
+# ------------------------------
+.nx/cache
+.nx/workspace-data
+
+# ------------------------------
+# OS / Editor junk
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Cursor / GitHub temp
+# ------------------------------
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md

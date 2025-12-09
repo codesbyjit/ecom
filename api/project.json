@@ -1,0 +1,13 @@
+{
+  "name": "api",
+  "root": "api",
+  "sourceRoot": "api",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "go run api/main.go"
+      }
+    }
+  }
+}
